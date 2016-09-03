@@ -1,0 +1,35 @@
+{
+  "name": "xml2json-cli",
+  "version": "1.0.0",
+  "description": "A node CLI wrapper for xml2json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyism/node-xml2json-cli.git"
+  },
+  "keywords": [
+    "xml2json",
+    "xml",
+    "json",
+    "to",
+    "cli",
+    "converter",
+    "parser",
+    "command",
+    "line",
+    "commandline"
+  ],
+  "author": "Joey Sham <sham.joey@gmail.com> (http://www.joeyism.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeyism/node-xml2json-cli/issues"
+  },
+  "homepage": "https://github.com/joeyism/node-xml2json-cli#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "xml2json": "^0.10.0"
+  }
+}
