@@ -31,23 +31,31 @@ if (inputFile === "--help" || inputFile === "-h"){
 }
 else if (inputFile != null){
     var inputFilePath = path.join(process.cwd(), inputFile);
-    var parsedDoc = parser.toJson(inputFilePath);
-    var parsedDocText = JSON.stringify(parsedDoc, null, "\t");
-    if (outputFile){
-        outputFilePath = path.join(process.cwd(), outputFile);
-        fs.writeFile(outputFilePath, parsedDocText, function(err){
-            if (err){
-                console.log(err.toString().red);
-            }
-            else {
-                console.log("\n   Complete writing to ".green + outputFile.green + "\n");
-            }
-        });
 
-    }
-    else {
-        console.log(parsedDocText);
-    }
+    fs.readFile(inputFilePath, function(err, xmlFile){
+        if (err){
+            console.log(err.toString().red);
+            return;
+        }
+        var options = {object: true};
+        var parsedDoc = parser.toJson(xmlFile, options);
+        var parsedDocText = JSON.stringify(parsedDoc, null, "\t");
+        if (outputFile){
+            outputFilePath = path.join(process.cwd(), outputFile);
+            fs.writeFile(outputFilePath, parsedDocText, function(err){
+                if (err){
+                    console.log(err.toString().red);
+                }
+                else {
+                    console.log("\n   Complete writing to ".green + outputFile.green + "\n");
+                }
+            });
+
+        }
+        else {
+            console.log(parsedDocText);
+        }
+    });
 }
 else {
     console.log("Please provide an input file".red); 
