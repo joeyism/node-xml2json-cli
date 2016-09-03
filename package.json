@@ -13,7 +13,7 @@
   "scripts":{
     "xml2json": "xml2json-cli.js",
     "json2xml": "json2xml-cli.js"
-  }
+  },
   "keywords": [
     "xml2json",
     "xml",
