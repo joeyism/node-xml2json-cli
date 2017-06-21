@@ -18,7 +18,6 @@ var title = ""+
 "  _/ |                                          \n"+
 " |__/                                           \n";
 
-console.log(title);
 if (inputFile === "--help" || inputFile === "-h"){
     console.log("To run:\n");
     console.log("\tjson2xml ".green+"[inputfile]".white+ " " +"[outputfile]".white+"\n");
