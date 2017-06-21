@@ -8,16 +8,6 @@ var fs = require("fs");
 var inputFile = params[2];
 var outputFile = params[3];
 
-var title = ""+
-"    _                   ___                   _ \n"+
-"   (_)                 |__ \\                 | |\n"+
-"    _ ___  ___  _ __      ) | __  ___ __ ___ | |\n"+
-"   | / __|/ _ \\| '_ \\    / /  \\ \\/ / '_ ` _ \\| |\n"+
-"   | \\__ \\ (_) | | | |  / /_   >  <| | | | | | |\n"+
-"   | |___/\\___/|_| |_| |____| /_/\\_\\_| |_| |_|_|\n"+
-"  _/ |                                          \n"+
-" |__/                                           \n";
-
 if (inputFile === "--help" || inputFile === "-h"){
     console.log("To run:\n");
     console.log("\tjson2xml ".green+"[inputfile]".white+ " " +"[outputfile]".white+"\n");
