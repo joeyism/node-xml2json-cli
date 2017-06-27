@@ -35,3 +35,10 @@ $ json2xml [input json file] [output xml file (optional)]
 ```
 $ json2xml somefile.json samefilebutconverted.xml
 ```
+
+# Versions
+## 1.1.0
+* Removed title on output
+
+## 1.0.0
+* Initial
