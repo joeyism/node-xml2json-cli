@@ -18,7 +18,7 @@ if (inputFile === "--help" || inputFile === "-h"){
     console.log("\txml2json thiscompany.xml thiscompany.json\n");
 }
 else if (inputFile != null){
-    var inputFilePath = path.join(process.cwd(), inputFile);
+    var inputFilePath = path.resolve(process.cwd(), inputFile);
 
     fs.readFile(inputFilePath, function(err, xmlFile){
         if (err){
@@ -29,7 +29,7 @@ else if (inputFile != null){
         var parsedDoc = parser.toJson(xmlFile, options);
         var parsedDocText = JSON.stringify(parsedDoc, null, "\t");
         if (outputFile){
-            outputFilePath = path.join(process.cwd(), outputFile);
+            outputFilePath = path.resolve(process.cwd(), outputFile);
             fs.writeFile(outputFilePath, parsedDocText, function(err){
                 if (err){
                     console.log(err.toString().red);
